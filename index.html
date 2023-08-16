@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/icon.png" type="image/x-icon">
     <title>login</title>
 </head>
 
@@ -19,8 +19,7 @@
         <input type="password" name="" id="password" placeholder="  Digita a Senha....">
         <input type="checkbox" name="termos" id="checkbox"> <a class="text">aceito todos os <a href="./test.png"
                 id="termo2">termos</a> </a>
-
-        <button id="button" disabled >Entrar</button>
+        <button  id="button" disabled >Entrar</button>
 
 
     </div>
@@ -32,12 +31,13 @@
     const checkbox = document.getElementById("checkbox");
     const meuBotao = document.getElementById("button");
 
-    checkbox.addEventListener("change", function () {
-        if (checkbox.checked) {
-            meuBotao.disabled = false;
-            meuBotao.disabled = true;
-        }
-    });
+    checkbox.addEventListener("change", function() {
+  if (checkbox.checked) {
+    meuBotao.disabled = false; 
+  } else {
+    meuBotao.disabled = true; 
+  }
+});
     meuBotao.addEventListener("click", function () {
         login();
     });
@@ -46,7 +46,7 @@
         var name = document.getElementById('name').value;
         var password = document.getElementById('password').value;
         if ((password == 12345678) || (name == Mdrest)) {
-          location.href = "./M.png"
+            window.location.href = "https://mdrest.online"
 
         }
         else {
