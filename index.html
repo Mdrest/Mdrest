@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+    <title>login</title>
 </head>
 
 <body class="box">
@@ -33,25 +34,24 @@
 
     checkbox.addEventListener("change", function () {
         if (checkbox.checked) {
-            meuBotao.disabled = false; // Habilitando o botão quando a caixa é marcada
-        } else {
-            meuBotao.disabled = true; // Desabilitando o botão quando a caixa é desmarcada
+            meuBotao.disabled = false;
+            meuBotao.disabled = true;
         }
     });
     meuBotao.addEventListener("click", function () {
-        login(); // Chamando a função quando o botão é pressionado
+        login();
     });
     function login() {
 
-            var name = document.getElementById('name').value;
-            var password = document.getElementById('password').value;
-            if ((password == 12345678) || (name == Mdrest)) {
-                window.location.href = "https://www.youtube.com/channel/UCqRH4aMqGMMKq8OMddyZjjA"
+        var name = document.getElementById('name').value;
+        var password = document.getElementById('password').value;
+        if ((password == 12345678) || (name == Mdrest)) {
+            window.location.href = "https://www.youtube.com/channel/UCqRH4aMqGMMKq8OMddyZjjA"
 
-            }
-            else {
+        }
+        else {
 
-            }
+        }
 
     }
 
@@ -65,6 +65,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    
 
 
 
@@ -214,4 +215,64 @@
         z-index: 5;
 
     }
+
+@media (max-width: 768px) {
+    .logo {
+        position: relative;
+        left: 0ch;
+        top: -40ch;
+        width: 17ch;
+        height: 17ch;
+        z-index: 5;
+
+
+    }
+    #button {
+        position: absolute;
+        top: 9cm;
+        width: 7cm;
+        height: 45px;
+        background-color: rgb(0, 255, 234);
+        color: black;
+        border-radius: 8px;
+        font-size: large;
+        z-index: 5;
+
+    }
+    .logo-box {
+        position: absolute;
+        left: 122px;
+        top: 0px;
+        width: 120px;
+        height: 120px;
+
+    }
+
+    .login-box {
+        width: 100%;
+        height: 65vh;
+        padding: 300px, 0;
+       justify-content: center;
+        align-items: center;
+        display: flex;
+        border: 1px;
+        border-radius: 10px;
+        background-color: #000000;
+        border: 1px solid rgba(255, 255, 255, 0.527);
+        position: absolute;
+        animation-name: rgb-borde;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+
+    }
+
+    
+}
+
+@keyframes rgb-borde{
+
+    front { border: 1px solid rgb(0, 38, 255);}
+    to {border: 1px solid rgba(0, 38, 255, 0.363); }
+}
+
 </style>
