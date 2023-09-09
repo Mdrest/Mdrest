@@ -5,20 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="" type="seu_endereco_de_img_em_icon">
+    <!-- Bote o endereco do seu icone aqui em icon -->
     <title>login</title>
 </head>
 
-<body class="box">
-
-    <img src="./M.png" alt="" class="logo">
+<body class="box" onclick="atulizar()">
+    <!-- Bote o endereco da sua logo aqui 
+                    |
+                    V                        -->
+    <img src="http://mdrest.online/M.png" alt="" class="logo">
 
     <div class="login-box">
-        <img src="./test.png" alt="" class="logo-box">
+
+        <!-- Bote o endereco da sua logo aqui 
+                    |
+                    V                        -->
+        <img src="http://mdrest.online/test.png" alt="" class="logo-box">
         <input type="text" name="" id="name" placeholder=" Digite seu Nome">
         <input type="password" name="" id="password" placeholder="  Digita a Senha....">
-        <input type="checkbox" name="termos" id="checkbox"> <a class="text">aceito todos os <a href="./test.png"
-                id="termo2">termos</a> </a>
+        <input type="checkbox" name="termos" id="checkbox">
+                                 <!-- Bote o endereco da sua logo aqui   -->
+        <a class="text">Aceito todos os <a href="(link dos termos aqui)" id="termo2">termos</a> </a>
         <input type="button" value="Entrar" id="buttonoff">
 
 
@@ -28,33 +36,38 @@
 
 </html>
 <script>
-    const checkbox = document.getElementById("checkbox");
-    const meuBotao = document.getElementById("buttonoff");
+    function atulizar() {
+        const checkbox = document.getElementById("checkbox");
+        const meuBotao1 = document.getElementById("button");
+        const meuBotao2 = document.getElementById("buttonoff");
 
-    checkbox.addEventListener("change", function () {
-        if (checkbox.checked) {
-            meuBotao.id = "button";
-        } else {
-            meuBotao.id = "buttonoff";
+
+        checkbox.addEventListener("change", function () {
+
+            if (checkbox.checked) {
+                meuBotao2.id = "button";
+            } else {
+                meuBotao1.id = 'buttonoff'
+            }
+        });
+        meuBotao1.addEventListener("click", function () {
+            login();
+        });
+        function login() {
+
+            var name = document.getElementById('name').value;
+            var password = document.getElementById('password').value;
+            // Mude a senha e nome aqui
+            if ((password == 12345678 || password == 123) || (name == Mdrest || name == admin123)) {
+                window.location.href = "./Home.html"
+
+            }
+            else {
+
+            }
+
         }
-    });
-    meuBotao.addEventListener("click", function () {
-        login();
-    });
-    function login() {
-
-        var name = document.getElementById('name').value;
-        var password = document.getElementById('password').value;
-        if ((password == 12345678) || (name == Mdrest)) {
-            window.location.href = "./Home.html"
-
-        }
-        else {
-
-        }
-
-    }
-
+    };
 
 
 
@@ -83,6 +96,7 @@
         background-color: #000000;
         border: 1px solid rgba(255, 255, 255, 0.103);
         position: absolute;
+        visibility: unset;
 
     }
 
@@ -223,9 +237,9 @@
         top: 9cm;
         width: 7cm;
         height: 45px;
-        color: #000000;
+        color: #0000009f;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        background-color: rgba(0, 255, 234, 0.377);
+        background-color: rgba(0, 199, 182, 0.685);
         border-radius: 8px;
         font-size: large;
         z-index: 5;
@@ -250,8 +264,9 @@
             top: 9cm;
             width: 7cm;
             height: 45px;
-            background-color: rgb(0, 255, 234);
-            color: black;
+            background-color: rgb(0, 0, 0);
+            color: rgb(0, 247, 255);
+            border-color: rgba(0, 209, 209, 0.808);
             border-radius: 8px;
             font-size: large;
             z-index: 5;
@@ -297,5 +312,13 @@
         to {
             border: 1px solid rgba(0, 38, 255, 0.363);
         }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
     }
 </style>
